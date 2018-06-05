@@ -1,0 +1,19 @@
+/*--------------------------FLEX BOX-----------------------*/
+.flex{
+	display: flex;
+}
+
+.flex-j-c{
+	justify-content: center;
+	
+}
+.flex-al-c{
+	align-items: center;
+}
+.flex-al-end{
+	align-items: flex-end;
+}
+
+.flex-wrap{
+	flex-wrap: wrap;
+}
