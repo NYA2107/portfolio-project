@@ -14,3 +14,7 @@ function ready(){
 function clicked(id) {
 	window.location.href = "bridge.php?img_id=" + id;
 }
+
+function back(){
+	window.location.href = "index.php";
+}

@@ -5,7 +5,7 @@
       $this->connection = new ConnectionDb();
     }
     function getImgUrl(){
-      $sql = "SELECT image_url FROM image WHERE image_id =''".$this->imgId."';";
+      $sql = "SELECT image_url FROM image WHERE image_id ='".$this->imgId."';";
       $result = $this->connection->conn->query($sql);
       while($row = $result->fetch_assoc()){
         return $row["image_url"];
@@ -21,8 +21,8 @@
       return $resultCol;
     }
     function setImgComment($name, $commentText){
-      $sql = "INSERT INTO 'comment'('comment_name', 'comment_text', 'fk_image_id') VALUES ('".$name."','".$commentText."','".$this->imgId."';";
-      $connection->conn->query($sql);
+      $sql = "INSERT INTO `comment`(`comment_name`, `comment_text`, `fk_image_id`) VALUES ('".$name."','".$commentText."','".$this->imgId."');";
+      $this->connection->conn->query($sql);
     }
   }
 

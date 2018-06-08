@@ -7,7 +7,9 @@
   }
 
   $query = new Query($_SESSION['imageid']);
+
   $comments = $query->getImgComments();
+  $imageUrl = $query->getImgUrl();
  ?>
 
 <!DOCTYPE html>
@@ -21,10 +23,14 @@
   <body class="flex flex-j-c flex-al-c">
     <div class="main-container flex flex-j-c flex-al-c flex-wrap">
       <div class="img-container flex flex-j-c flex-al-c flex-wrap">
-          <img class="img" src="img/1.jpg">
+          <input id="back-button" type="button" name="" value="Back" onclick="back()">
+          <?php
+            echo '<img class="img" src="'.$imageUrl.'">';
+           ?>
+
       </div>
       <div class="comment-container flex flex-wrap">
-        <div class="comment-show-container flex flex-j-c flex-al-c flex-wrap">
+        <div class="comment-show-container flex flex-j-c flex-al-s flex-wrap ">
           <!-- comment here -->
           <?php
             foreach ($comments as $key => $com) {
@@ -50,13 +56,15 @@
 
         </div>
         <div class="comment-box-container flex flex-j-c flex-al-c">
-          <form action="/action_page.php" class="flex flex-j-c flex-al-c flex-wrap">
-            <input id="name" type="text" name="firstname" placeholder="Input your name here">
-            <textarea id="comment" name="comment" form="usrform" placeholder="Add comment"></textarea>
+          <form action="blank.php" class="flex flex-j-c flex-al-c flex-wrap" method='get'>
+            <input id="name" type="text" name="name" placeholder="Input your name here">
+            <textarea id="comment" name="comment" placeholder="Add comment"></textarea>
             <input id="submit" type="submit" value="Submit">
           </form>
         </div>
       </div>
     </div>
+    <script language="javascript" type="text/javascript" src="js/sketch.js"></script>
   </body>
+
 </html>

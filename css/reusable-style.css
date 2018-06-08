@@ -5,8 +5,12 @@
 
 .flex-j-c{
 	justify-content: center;
-	
+
 }
+.flex-al-s{
+	align-items: flex-start;
+}
+
 .flex-al-c{
 	align-items: center;
 }
@@ -16,4 +20,12 @@
 
 .flex-wrap{
 	flex-wrap: wrap;
+}
+
+.flex-dir-col{
+	flex-direction: column;
+}
+
+.flex-alc-s{
+	align-content: flex-start;
 }

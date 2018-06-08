@@ -14,7 +14,7 @@
     			<h2>MY GALLERY</h2>
     			<div class="gallery flex flex-j-c flex-al-c flex-wrap" >
 	    			<img id="img1" class="img" src="img/1.jpg" onmouseover="list[1].change()" onclick="clicked(this.id)">
-            <img id="img2" class="img" src="img/3.jpg" onmouseover="list[2].change()" onclick="clicked(this.id)">
+            <img id="img2" class="img" src="img/2.jpg" onmouseover="list[2].change()" onclick="clicked(this.id)">
 	  				<img id="img3" class="img" src="img/3.jpg" onmouseover="list[3].change()" onclick="clicked(this.id)">
 	  				<img id="img4" class="img" src="img/4.jpg" onmouseover="list[4].change()" onclick="clicked(this.id)">
     			</div>
